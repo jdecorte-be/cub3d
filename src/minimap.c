@@ -2,15 +2,15 @@
 
 void    put_spawn(float x, float y, t_img *img)
 {
-    float step = 2*Math.PI/20;  // see note 1
+    float step = 2 * M_PI / 20;  // see note 1
     int h = 150; 
     int k = 150;
     int r = 50;
 
-    for(int theta=0;  theta < 2*Math.PI;  theta+=step)
+    for(int theta=0;  theta < 2*M_PI;  theta+=step)
      {
-		 int x = h + r*Math.cos(theta);
-       int y = k - r*Math.sin(theta);    //note 2.
+		 int x = h + r* cos(theta);
+       int y = k - r* sin(theta);    //note 2.
        put_pxl(img, x, y, 0xffffff);
      }
 }

@@ -2,7 +2,7 @@ NAME = fdf
 
 CC = gcc
 
-CFLAGS = -I /usr/local/include -L /usr/local/lib/ -lmlx -framework OpenGL -framework AppKit -fsanitize=address -g
+CFLAGS = -I /usr/local/include -L /usr/local/lib/ -lmlx -framework OpenGL -framework AppKit
 
 RM = rm -rf
 
