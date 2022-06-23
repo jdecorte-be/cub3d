@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   read_file.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jdecorte42 <jdecorte42@student.42.fr>      +#+  +:+       +#+        */
+/*   By: lxu-wu <lxu-wu@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/21 15:27:28 by jdecorte42        #+#    #+#             */
-/*   Updated: 2022/06/23 15:25:01 by jdecorte42       ###   ########.fr       */
+/*   Updated: 2022/06/23 15:35:11 by lxu-wu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,6 @@ int	read_file(char **str, int fd)
 	if (len == -1)
 		return (1);
 	(*str)[len] = 0;
-	if (len == 0)
-		exit(write_error("Error\nEmpty file\n"));
 	return (0);
 }
 
@@ -34,16 +32,20 @@ int	get_file(int fd, char ***tab)
 	s1 = malloc(10241);
 	str = 0;
 	if (read_file(&s1, fd))
-		exit (write_error("Error\nRead failed\n"));
+		return (write_error("Error\nRead failed\n"));
 	while (s1 && *s1)
 	{
 		if (are_printable(s1))
-			exit (write_error("Error\nBad elem\n"));
+			return (write_error("Error\nBad elem\n"));
 		str = ft_free_join(str, s1, 1);
-		if (read_file(&s1, fd))
-			exit (write_error("Error\nRead failed\n"));
+		if (!str || read_file(&s1, fd))
+		{
+			return (write_error("Error\nRead failed\n"));
+		}
 	}
 	*tab = split1(str, '\n');
+	if (!tab)
+		return (write_error("Error\nMap empty\n"));
 	free(s1);
 	free(str);
 	return (0);
