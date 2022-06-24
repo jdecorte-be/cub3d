@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   read_file.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lxu-wu <lxu-wu@student.42.fr>              +#+  +:+       +#+        */
+/*   By: jdecorte42 <jdecorte42@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/21 15:27:28 by jdecorte42        #+#    #+#             */
-/*   Updated: 2022/06/23 15:41:05 by lxu-wu           ###   ########.fr       */
+/*   Updated: 2022/06/23 15:36:35 by jdecorte42       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ int	get_file(int fd, char ***tab)
 		}
 	}
 	*tab = split1(str, '\n');
-	if (!*tab)
+	if (!tab)
 		return (write_error("Error\nMap empty\n"));
 	free(s1);
 	free(str);
