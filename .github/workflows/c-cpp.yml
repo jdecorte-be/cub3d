@@ -14,7 +14,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Install dependencies
-        run: sudo apt-get update && sudo apt-get install -y build-essential libxext-dev libx11-dev xorg
+        run: sudo apt-get update && sudo apt-get install -y build-essential libxext-dev libx11-dev xorg libbsd-dev
       - name: Clone minilibx-linux
         run: git clone https://github.com/42Paris/minilibx-linux.git minilibx_linux
       - name: Build
