@@ -62,16 +62,7 @@
 </p>
 </header>
 
-<p align="center">
-  <a href="https://github.com/jdecorte-be/42-Cub3d"><img src="https://shields.io/badge/Platform-Linux-blue?logo=linux" alt="Platform"></a>
-  <a href="https://github.com/jdecorte-be/42-Cub3d/stargazers"><img src="https://shields.io/github/stars/jdecorte-be/42-Cub3d" alt="Stars"></a>
-  <a href="https://github.com/jdecorte-be/42-Cub3d/issues"><img src="https://shields.io/github/issues/jdecorte-be/42-Cub3d" alt="Issues"></a>
-  <a href="https://github.com/jdecorte-be/42-Cub3d"><img src="https://shields.io/github/license/jdecorte-be/42-Cub3d" alt="License"></a>
-</p>
 
-<p align="center">
-  <a href="#key-features">Key Features</a> • <a href="#installation">Installation</a> • <a href="#usage">Usage</a>
-</p>
 
 
 ## Description
