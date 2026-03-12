@@ -14,7 +14,10 @@ NAME = cub3D
 
 CC = gcc
 
-CFLAGS = -Werror -Wextra -Wall -I minilibx -L minilibx_macos -lmlx -framework OpenGL -framework AppKit
+CFLAGS = -Werror -Wextra -Wall -std=gnu99
+
+MLX_DIR = minilibx_linux
+MLX_FLAGS = -L $(MLX_DIR) -lmlx -lXext -lX11 -lm -lz
 
 RM = rm -rf
 
@@ -66,26 +69,26 @@ SRCS_BONUS = src_bonus/dlst_bonus.c\
 
 
 $(NAME) : ${SRCS}
-	make all -C minilibx_macos
+	make all -C $(MLX_DIR)
 	make bonus -C libft
-	gcc $(CFLAGS) $(SRCS) libft/libft.a -o $(NAME)
+	gcc $(CFLAGS) $(SRCS) libft/libft.a $(MLX_FLAGS) -o $(NAME)
 
 bonus : ${SRCS_BONUS}
 	make clean
-	make all -C minilibx_macos
+	make all -C $(MLX_DIR)
 	make bonus -C libft
-	gcc $(CFLAGS) $(SRCS_BONUS) libft/libft.a -o $(NAME)
+	gcc $(CFLAGS) $(SRCS_BONUS) libft/libft.a $(MLX_FLAGS) -o $(NAME)
 
 all : $(NAME)
 
 fclean : clean
 	$(RM) $(NAME)
-	make clean -C minilibx_macos
+	make clean -C $(MLX_DIR)
 	make fclean -C libft
 
 clean :
 	$(RM) $(NAME)
-	make clean -C minilibx_macos
+	make clean -C $(MLX_DIR)
 	make clean -C libft
 
 re : fclean all

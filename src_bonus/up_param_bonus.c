@@ -18,13 +18,13 @@ int	mousing(t_data *data)
 	int			y;
 	int			dx;
 
-	mlx_mouse_get_pos(data->mlx_win, &x, &y);
+	mlx_mouse_get_pos(data->mlx, data->mlx_win, &x, &y);
 	dx = x - WIN_WIDTH / 2;
 	if (dx > 0)
 		update_param(data, dx * (-(2 * M_PI / 11520)));
 	else if (dx < 0)
 		update_param(data, -dx * 2 * M_PI / 11520);
-	mlx_mouse_move(data->mlx_win, WIN_WIDTH / 2, WIN_HEIGHT / 2);
+	mlx_mouse_move(data->mlx, data->mlx_win, WIN_WIDTH / 2, WIN_HEIGHT / 2);
 	return (0);
 }
 

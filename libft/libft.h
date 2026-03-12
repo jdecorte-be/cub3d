@@ -21,6 +21,10 @@
 # include <stdlib.h>
 # include <limits.h>
 
+# ifndef OPEN_MAX
+#  define OPEN_MAX 1024
+# endif
+
 typedef struct s_list
 {
 	void			*content;

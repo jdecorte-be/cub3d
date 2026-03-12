@@ -74,11 +74,11 @@ int	main(int ac, char **av)
 	map_init(&map, data);
 	if (parsing(data, &map, av))
 		free_exit(data);
-	mlx_mouse_move(data->mlx_win, WIN_WIDTH / 2, WIN_HEIGHT / 2);
+	mlx_mouse_move(data->mlx, data->mlx_win, WIN_WIDTH / 2, WIN_HEIGHT / 2);
 	data->n_sprites = ft_lstsize(data->map->item);
 	set_spawn(data);
 	set_plane(data, data->map->dirspawn);
-	mlx_mouse_hide();
+	mlx_mouse_hide(data->mlx, data->mlx_win);
 	mlx_do_key_autorepeaton(data->mlx);
 	mlx_hook(data->mlx_win, 2, 0, key_handler, data);
 	mlx_hook(data->mlx_win, 3, 0, key_exit, data);
