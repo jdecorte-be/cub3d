@@ -1,8 +1,66 @@
+<header>
 <h1 align="center">
-  <a href="https://github.com/jdecorte-be/42-Cub3d"><img src="assets/banner.png" alt="42-Cub3d" ></a>
+  <a href="https://github.com/jdecorte-be/cub3d"><img src=".assets/banner.png" alt="cub3d" ></a>
+  cub3d
   <br>
-  42-Cub3d
 </h1>
+
+<p align="center">
+  A 3D graphical representation of a maze from a first-person perspective, inspired by Wolfenstein 3D. This 42 school project is built in C using raycasting.
+</p>
+
+<p align="center">
+<a href="https://www.42.fr/">
+    <img src="https://img.shields.io/badge/School-42-00babc?logo=42&logoColor=white&labelColor=000000"
+         alt="School 42">
+  </a>
+<a href="#">
+    <img src="https://img.shields.io/badge/Focus-3D%20Graphics-4c89e3?logo=opengl&logoColor=white&labelColor=000000"
+         alt="Focus 3D Graphics">
+  </a>
+<a href="#">
+    <img src="https://img.shields.io/badge/Technique-Raycasting-d9730d?labelColor=000000"
+         alt="Technique Raycasting">
+  </a>
+<a href="#">
+    <img src="https://img.shields.io/badge/Type-Game%20Engine-9900ff?logo=godotengine&logoColor=white&labelColor=000000"
+         alt="Type Game Engine">
+  </a>
+</p>
+
+<p align="center">
+<a href="#">
+    <img src="https://img.shields.io/badge/Platform-macOS-a9a9a9?logo=apple&logoColor=white&labelColor=000000"
+         alt="Platform macOS">
+  </a>
+  <a href="https://github.com/jdecorte-be/cub3d/blob/master/LICENSE">
+    <img src="https://img.shields.io/badge/License-GPL--3.0-AE81FF?labelColor=000000"
+         alt="cub3d license">
+  </a>
+  <a href="https://github.com/jdecorte-be/cub3d/stargazers">
+    <img src="https://img.shields.io/github/stars/jdecorte-be/cub3d?logo=star&logoColor=white&labelColor=000000&color=E6DB74"
+         alt="cub3d stars">
+  </a>
+  <a href="https://github.com/jdecorte-be/cub3d/issues">
+    <img src="https://img.shields.io/github/issues/jdecorte-be/cub3d?logoColor=white&labelColor=000000&color=orange"
+         alt="cub3d issues">
+  </a>
+  <a href="https://github.com/jdecorte-be/cub3d">
+    <img src="https://img.shields.io/github/repo-size/jdecorte-be/cub3d?logo=database&logoColor=white&labelColor=000000&color=AE81FF"
+         alt="cub3d repo size">
+  </a>
+  <a href="https://github.com/jdecorte-be/cub3d">
+    <img src="https://img.shields.io/github/languages/top/jdecorte-be/cub3d?logo=code&logoColor=white&labelColor=000000&color=A6E22E"
+         alt="cub3d top language">
+  </a>
+</p>
+<p align="center">
+  <a href="#description">Description</a> •
+  <a href="#bresenhams-line-algorith">Bresenham's line algorith</a> •
+  <a href="#dda-algorithm">DDA algorithm</a> •
+  <a href="#other">Other</a>
+</p>
+</header>
 
 <p align="center">
   <a href="https://github.com/jdecorte-be/42-Cub3d"><img src="https://shields.io/badge/Platform-Linux-blue?logo=linux" alt="Platform"></a>
@@ -115,5 +173,4 @@ The use of calculations with real numbers and only a single use of rounding to f
 ## Other
 [Ray-casting](https://lodev.org/cgtutor/raycasting.html#Textured_Raycaster)  
 [Guide MinilibX](https://qst0.github.io/ft_libgfx/man_mlx.html)  
-[Guide MinilibX v 2.0](https://harm-smits.github.io/42docs/libs/minilibx)  
-  
+[Guide MinilibX v 2.0](https://harm-smits.github.io/42docs/libs/minilibx)
